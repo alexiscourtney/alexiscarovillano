@@ -1,9 +1,21 @@
-at@import "_reset";
+@import "_reset";
 @import "_variables";
 
 body {
   max-width: 950px;
   margin: 2% auto;
+  font: 16px $bodyfont;
+}
+
+html,body {
+  height: 100%;
+}
+
+#wrapper {
+  min-height: 100%;
+  #sidebar,  main {
+    padding-bottom: $footer-height + $footer-top-margin;
+  }
 }
 
 header {
@@ -18,6 +30,7 @@ header {
 
 nav {
 margin-top: 1.5%;
+margin-bottom: 10%;
   ul {
     text-align: center;
       li {
@@ -40,22 +53,63 @@ margin-top: 1.5%;
 #sidebar {
   max-width: 250px;
   float: left;
-  margin:10% auto;
+
       #about {
         margin-bottom: 5%;
+        img {
+            max-width: 250px;
+            @extend %photoborder;
+            margin-bottom: 5%;
+        }
         h2 {
           @extend %headertext;
           font-size: 25px;
         }
         p {
-          font: 16px $bodyfont;
           text-align: justify;
         }
       }
+
         #instagram {
           h2 {
             @extend %headertext;
             font-size: 25px;
           }
+          iframe {
+            @extend %photoborder;
+          }
         }
       }
+
+main {
+  max-width: 625px;
+  float: right;
+  padding: 2%;
+  @extend %photoborder;
+  border-radius: 0%;
+
+  h2 {
+    @extend %headertext;
+    font-size: 30px;
+  }
+  h5 {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 2%;
+    color: $linktext;
+  }
+}
+
+#footer {
+  clear: both;
+  height: $footer-height;
+  margin-top: -($footer-height);
+  position: relative;
+  h5 {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    color: $linktext;
+  }
+}

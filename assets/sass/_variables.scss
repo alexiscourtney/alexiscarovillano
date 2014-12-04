@@ -14,7 +14,9 @@ $headerfont: 'Julius Sans One', sans-serif;
 
 $testfont: monospace;
 
-// MIXINS
+// STICKY FOOTER
+$footer-height: 50px;
+$footer-top-margin: 50px;
 
 
 
@@ -24,4 +26,9 @@ $testfont: monospace;
   text-align: center;
   font-family: $headerfont;
   line-height: 1.5em;
+}
+
+%photoborder {
+  border: 1px solid darken($linktext, 30);
+  border-radius: 15%;
 }

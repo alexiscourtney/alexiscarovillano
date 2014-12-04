@@ -48,14 +48,27 @@ table {
 a {
   text-decoration: none; }
 
-header h1, #sidebar #about h2, #sidebar #instagram h2 {
+header h1, #sidebar #about h2, #sidebar #instagram h2, main h2 {
   text-align: center;
   font-family: "Julius Sans One", sans-serif;
   line-height: 1.5em; }
 
+#sidebar #about img, #sidebar #instagram iframe, main {
+  border: 1px solid #15836f;
+  border-radius: 15%; }
+
 body {
   max-width: 950px;
-  margin: 2% auto; }
+  margin: 2% auto;
+  font: 16px "Quattrocento Sans", sans-serif; }
+
+html, body {
+  height: 100%; }
+
+#wrapper {
+  min-height: 100%; }
+  #wrapper #sidebar, #wrapper main {
+    padding-bottom: 100px; }
 
 header h1 {
   font-size: 56px; }
@@ -63,7 +76,8 @@ header h1 {
     color: #1fc5a7; }
 
 nav {
-  margin-top: 1.5%; }
+  margin-top: 1.5%;
+  margin-bottom: 10%; }
   nav ul {
     text-align: center; }
     nav ul li {
@@ -79,16 +93,42 @@ nav {
 
 #sidebar {
   max-width: 250px;
-  float: left;
-  margin: 10% auto; }
+  float: left; }
   #sidebar #about {
     margin-bottom: 5%; }
+    #sidebar #about img {
+      max-width: 250px;
+      margin-bottom: 5%; }
     #sidebar #about h2 {
       font-size: 25px; }
     #sidebar #about p {
-      font: 16px "Quattrocento Sans", sans-serif;
       text-align: justify; }
   #sidebar #instagram h2 {
     font-size: 25px; }
+
+main {
+  max-width: 625px;
+  float: right;
+  padding: 2%;
+  border-radius: 0%; }
+  main h2 {
+    font-size: 30px; }
+  main h5 {
+    text-align: right;
+    font-style: italic;
+    font-size: 14px;
+    margin-bottom: 2%;
+    color: #4EE3C8; }
+
+#footer {
+  clear: both;
+  height: 50px;
+  margin-top: -50px;
+  position: relative; }
+  #footer h5 {
+    font-style: italic;
+    font-size: 14px;
+    text-align: center;
+    color: #4EE3C8; }
 
 /*# sourceMappingURL=stylesheet.css.map */
