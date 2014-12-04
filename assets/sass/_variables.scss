@@ -1,0 +1,27 @@
+// COLORS
+
+$lightgray: #E8E8E8;
+$bodytext: #575757;
+$linktext: #4EE3C8;
+
+
+$testcolor: blue;
+
+// FONTS
+
+$bodyfont: 'Quattrocento Sans', sans-serif;
+$headerfont: 'Julius Sans One', sans-serif;
+
+$testfont: monospace;
+
+// MIXINS
+
+
+
+// EXTENDS
+
+%headertext {
+  text-align: center;
+  font-family: $headerfont;
+  line-height: 1.5em;
+}

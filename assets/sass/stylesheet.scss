@@ -1,0 +1,61 @@
+at@import "_reset";
+@import "_variables";
+
+body {
+  max-width: 950px;
+  margin: 2% auto;
+}
+
+header {
+  h1 {
+      @extend %headertext;
+      font-size: 56px;
+      span {
+        color: darken($linktext, 15);
+      }
+  }
+}
+
+nav {
+margin-top: 1.5%;
+  ul {
+    text-align: center;
+      li {
+        font: 24px $bodyfont;
+        display: inline;
+        padding: 5%;
+          a {
+            color: $linktext;
+            &:hover {
+              color: lighten($linktext, 9);
+            }
+            &:active {
+              color: darken($linktext, 13);
+            }
+          }
+       }
+    }
+}
+
+#sidebar {
+  max-width: 250px;
+  float: left;
+  margin:10% auto;
+      #about {
+        margin-bottom: 5%;
+        h2 {
+          @extend %headertext;
+          font-size: 25px;
+        }
+        p {
+          font: 16px $bodyfont;
+          text-align: justify;
+        }
+      }
+        #instagram {
+          h2 {
+            @extend %headertext;
+            font-size: 25px;
+          }
+        }
+      }
